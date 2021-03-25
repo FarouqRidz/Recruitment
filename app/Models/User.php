@@ -16,12 +16,22 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'username',
-        'name',
-        'email',
-        'password',
-    ];
+
+    protected $guarded = [];
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+    public function assignRole($role)
+    {
+        if (is_string($role)){ //catered for string parameter as well
+            $role = Role::whereName($role)->firstOrFail();
+        }
+
+        $this->roles()->sync($role);
+    }
 
     /**
      * The attributes that should be hidden for arrays.
