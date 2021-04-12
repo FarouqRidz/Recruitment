@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCandidateTable extends Migration
+class CreateCandidatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -41,7 +41,6 @@ class CreateCandidateTable extends Migration
             $table->boolean('recommended')->default(false);
             $table->string('allowance')->nullable();
             $table->dateTime('hire_date')->nullable();
-            $table->unsignedBigInteger('interview_id')->nullable();
             $table->timestamps();
         });
     }
