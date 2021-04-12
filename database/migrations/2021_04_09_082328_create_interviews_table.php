@@ -15,9 +15,9 @@ class CreateInterviewsTable extends Migration
     {
         Schema::create('interviews', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('applicant_id');
             $table->dateTime('interview_date_time');
             $table->string('venue');
+            $table->string('position');
             $table->timestamps();
         });
     }

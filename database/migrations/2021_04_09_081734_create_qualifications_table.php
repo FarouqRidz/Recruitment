@@ -15,7 +15,7 @@ class CreateQualificationsTable extends Migration
     {
         Schema::create('qualifications', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('applicant_id');
+            $table->unsignedBigInteger('candidate_id');
             $table->string('qualification_level')->nullable();
             $table->string('course');
             $table->date('graduation_date');

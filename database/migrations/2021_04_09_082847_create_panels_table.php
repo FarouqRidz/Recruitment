@@ -17,7 +17,6 @@ class CreatePanelsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('interview_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('name')->nullable();
             $table->timestamps();
         });
     }
