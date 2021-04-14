@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\InterviewController;
+use App\Http\Controllers\PanelController;
+use App\Http\Controllers\CandidateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +25,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/interview', [InterviewController::class, 'index'])->name('interview.index');
+Route::get('/panel', [PanelController::class, 'index'])->name('panel.index');
+Route::get('/candidate', [CandidateController::class, 'index'])->name('candidate.index');
