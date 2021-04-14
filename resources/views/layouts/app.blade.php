@@ -16,20 +16,19 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body class="h-screen bg-gray-200 overflow-hidden font-sans antialiased">
+        <div>
             @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-
+        </div>
+        <div class="h-full pb-16">
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="flex h-full overflow-hidden">
+                <div class="flex-none w-56 pl-2 z-10">
+                    @include('layouts.sidemenu')
+                </div>
+                <div class="w-full bg-white rounded-tl-3xl shadow-xl">
+                    {{ $slot }}
+                </div>
             </main>
         </div>
     </body>

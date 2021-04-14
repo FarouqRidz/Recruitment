@@ -60,8 +60,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         CtStatus::create([
-            'code' => 'REJ',
+            'code' => 'RJCT',
             'name' => 'Reject'
+        ]);
+
+        CtStatus::create([
+            'code' => 'DONE',
+            'name' => 'Completed'
         ]);
 
         CtItem::create([
