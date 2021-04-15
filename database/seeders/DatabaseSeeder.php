@@ -60,6 +60,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         CtStatus::create([
+            'code' => 'INT',
+            'name' => 'Interview'
+        ]);
+
+        CtStatus::create([
             'code' => 'RJCT',
             'name' => 'Reject'
         ]);
