@@ -23,7 +23,7 @@
         <div class="h-full pb-16">
             <!-- Page Content -->
             <main class="flex h-full overflow-hidden">
-                <div class="flex-none w-56 pl-2 z-10">
+                <div class="hidden sm:block flex-none w-56 pl-2 z-10">
                     @include('layouts.sidemenu')
                 </div>
                 <div class="w-full bg-gray-50 rounded-tl-3xl shadow-xl">
